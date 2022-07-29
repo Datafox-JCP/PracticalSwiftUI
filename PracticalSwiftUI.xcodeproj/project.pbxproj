@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C65532892894514600E7F87A /* PracticalSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65532882894514600E7F87A /* PracticalSwiftUIApp.swift */; };
-		C655328B2894514600E7F87A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C655328A2894514600E7F87A /* ContentView.swift */; };
+		C655328B2894514600E7F87A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C655328A2894514600E7F87A /* HomeView.swift */; };
 		C655328D2894514900E7F87A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C655328C2894514900E7F87A /* Assets.xcassets */; };
 		C65532902894514900E7F87A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C655328F2894514900E7F87A /* Preview Assets.xcassets */; };
+		C655329C2894525A00E7F87A /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C655329B2894525A00E7F87A /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C65532852894514600E7F87A /* PracticalSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticalSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65532882894514600E7F87A /* PracticalSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticalSwiftUIApp.swift; sourceTree = "<group>"; };
-		C655328A2894514600E7F87A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C655328A2894514600E7F87A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C655328C2894514900E7F87A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C655328F2894514900E7F87A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C655329B2894525A00E7F87A /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,11 @@
 			isa = PBXGroup;
 			children = (
 				C65532882894514600E7F87A /* PracticalSwiftUIApp.swift */,
-				C655328A2894514600E7F87A /* ContentView.swift */,
+				C655329A2894523800E7F87A /* Helpers */,
+				C65532992894522D00E7F87A /* Resources */,
+				C65532982894522600E7F87A /* Models */,
+				C65532972894522000E7F87A /* ViewModels */,
+				C65532962894521900E7F87A /* Views */,
 				C655328C2894514900E7F87A /* Assets.xcassets */,
 				C655328E2894514900E7F87A /* Preview Content */,
 			);
@@ -65,6 +71,43 @@
 				C655328F2894514900E7F87A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C65532962894521900E7F87A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C655328A2894514600E7F87A /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C65532972894522000E7F87A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C655329B2894525A00E7F87A /* ContentModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C65532982894522600E7F87A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C65532992894522D00E7F87A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C655329A2894523800E7F87A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C655328B2894514600E7F87A /* ContentView.swift in Sources */,
+				C655328B2894514600E7F87A /* HomeView.swift in Sources */,
 				C65532892894514600E7F87A /* PracticalSwiftUIApp.swift in Sources */,
+				C655329C2894525A00E7F87A /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

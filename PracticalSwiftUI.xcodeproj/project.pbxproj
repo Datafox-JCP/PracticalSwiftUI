@@ -18,6 +18,9 @@
 		C65532A428947B9700E7F87A /* HomeViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65532A328947B9700E7F87A /* HomeViewRow.swift */; };
 		C65532A62894AB5600E7F87A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65532A52894AB5500E7F87A /* ContentView.swift */; };
 		C65532A82894B75A00E7F87A /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65532A72894B75A00E7F87A /* ContentViewRow.swift */; };
+		C65532AA2894BCF400E7F87A /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65532A92894BCF400E7F87A /* ContentDetailView.swift */; };
+		C65532AD2894C18300E7F87A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65532AC2894C18300E7F87A /* AVKit.framework */; };
+		C65532AF2894C35C00E7F87A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65532AE2894C35C00E7F87A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		C65532A328947B9700E7F87A /* HomeViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRow.swift; sourceTree = "<group>"; };
 		C65532A52894AB5500E7F87A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C65532A72894B75A00E7F87A /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		C65532A92894BCF400E7F87A /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		C65532AC2894C18300E7F87A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		C65532AE2894C35C00E7F87A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65532AD2894C18300E7F87A /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,7 @@
 			children = (
 				C65532872894514600E7F87A /* PracticalSwiftUI */,
 				C65532862894514600E7F87A /* Products */,
+				C65532AB2894C18300E7F87A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +100,7 @@
 				C65532A328947B9700E7F87A /* HomeViewRow.swift */,
 				C65532A52894AB5500E7F87A /* ContentView.swift */,
 				C65532A72894B75A00E7F87A /* ContentViewRow.swift */,
+				C65532A92894BCF400E7F87A /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 			children = (
 				C655329D2894539800E7F87A /* data.json */,
 				C655329F289455BF00E7F87A /* style.html */,
+				C65532AE2894C35C00E7F87A /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,6 +136,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C65532AB2894C18300E7F87A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C65532AC2894C18300E7F87A /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +221,12 @@
 				C655328B2894514600E7F87A /* HomeView.swift in Sources */,
 				C65532A428947B9700E7F87A /* HomeViewRow.swift in Sources */,
 				C65532A62894AB5600E7F87A /* ContentView.swift in Sources */,
+				C65532AA2894BCF400E7F87A /* ContentDetailView.swift in Sources */,
 				C65532892894514600E7F87A /* PracticalSwiftUIApp.swift in Sources */,
 				C65532A82894B75A00E7F87A /* ContentViewRow.swift in Sources */,
 				C655329C2894525A00E7F87A /* ContentModel.swift in Sources */,
 				C65532A2289457AD00E7F87A /* Models.swift in Sources */,
+				C65532AF2894C35C00E7F87A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

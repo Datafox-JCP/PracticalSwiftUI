@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentViewRow: View {
+    
     @EnvironmentObject var model: ContentModel
     var index: Int
     
@@ -34,10 +35,11 @@ struct ContentViewRow: View {
                         .bold()
                     Text(lesson.duration)
                 }
-                .padding()
+                
             }
-            .padding(.bottom, 5)
-            
+            .padding()
         }
+        .padding(.bottom, 5)
+        
     }
 }

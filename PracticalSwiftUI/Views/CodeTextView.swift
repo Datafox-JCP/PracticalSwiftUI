@@ -1,5 +1,5 @@
 //
-//  CoolTextView.swift
+//  CodeTextView.swift
 //  PracticalSwiftUI
 //
 //  Created by Juan Hernandez Pazos on 30/07/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CoolTextView: UIViewRepresentable {
+struct CodeTextView: UIViewRepresentable {
     
     @EnvironmentObject var model: ContentModel
     
@@ -20,7 +20,7 @@ struct CoolTextView: UIViewRepresentable {
     
     func updateUIView(_ textView: UITextView, context: Context) {
         // Set the attributed text for the lesson
-        textView.attributedText = model.lessonDescription
+        textView.attributedText = model.codeText
         // Scroll back to the top
         textView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: false)
     }
@@ -28,6 +28,6 @@ struct CoolTextView: UIViewRepresentable {
 
 struct CoolTextView_Previews: PreviewProvider {
     static var previews: some View {
-        CoolTextView()
+        CodeTextView()
     }
 }

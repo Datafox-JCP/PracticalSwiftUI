@@ -98,12 +98,15 @@ class ContentModel: ObservableObject {
             }
             // Handle the response
             do {
-                // Create json decodr
+                // Create json decoder
                 let decoder = JSONDecoder()
                 // Decode
                 let modules = try decoder.decode([Module].self, from: data!)
-                // Append parsed modules into modules property
-                self.modules += modules
+                
+                DispatchQueue.main.async {
+                    // Append parsed modules into modules property
+                    self.modules += modules
+                }
             } catch {
                 // Couldn't parse the json
             }
@@ -155,6 +158,10 @@ class ContentModel: ObservableObject {
     }
     
     func hasNextLesson() -> Bool {
+        guard currentModule != nil else {
+            return false
+        }
+        
         return (currentLessonIndex + 1 < currentModule!.content.lessons.count)
     }
     

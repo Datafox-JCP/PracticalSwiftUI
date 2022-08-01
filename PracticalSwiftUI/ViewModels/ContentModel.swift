@@ -34,6 +34,7 @@ class ContentModel: ObservableObject {
     
     init() {
         getLocalData()
+        getRemoteData()
     }
     
         // MARK: - Data methods
@@ -50,7 +51,7 @@ class ContentModel: ObservableObject {
             let modules = try jsonDecoder.decode([Module].self, from: jsonData)
             
                 // Assign parsed modules to modules property
-            self.modules = modules
+            self.modules += modules
         } catch {
                 // TODO log error
             print("Couldn't parse local data")
@@ -71,6 +72,44 @@ class ContentModel: ObservableObject {
             print("Couldn't parse style data")
         }
         
+    }
+    
+    func getRemoteData() {
+        // String path
+        let urlString = "https://datafox-jcp.github.io/learningswift-data/data2.json"
+        // Create a url oibject
+        let url = URL(string: urlString)
+        
+        guard url != nil else {
+            // Couldn't create url
+            return
+        }
+        
+        // Create a URLRequest object
+        let request = URLRequest(url: url!)
+        // Get the session and kick off the task
+        let session = URLSession.shared
+        
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            // Check if there's an error
+            guard error == nil else {
+                // There was an error
+                return
+            }
+            // Handle the response
+            do {
+                // Create json decodr
+                let decoder = JSONDecoder()
+                // Decode
+                let modules = try decoder.decode([Module].self, from: data!)
+                // Append parsed modules into modules property
+                self.modules += modules
+            } catch {
+                // Couldn't parse the json
+            }
+        }
+        // Kick off data task
+        dataTask.resume()
     }
     
         // MARK: - Module navigation methods
